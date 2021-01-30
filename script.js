@@ -1,3 +1,4 @@
+// function for handling the increase and decrease button
 function handleTicketChange(isIncrease, ticketType) {
     const ticketCount = getInputValue(ticketType);
     let ticketNewCount = 0;
@@ -10,13 +11,13 @@ function handleTicketChange(isIncrease, ticketType) {
     document.getElementById(ticketType + '-ticket-count').value = ticketNewCount;
     getTotal();
 }
-
+//  function for getting the input
 function getInputValue(ticketType) {
     const ticketInput = document.getElementById(ticketType + '-ticket-count');
     const ticketCount = parseInt(ticketInput.value);
     return ticketCount;
 }
-
+// function for calculating total price
 function getTotal() {
     const firstClassCount = getInputValue('firstClass');
     const economyCount = getInputValue('economy');
@@ -28,7 +29,7 @@ function getTotal() {
     document.getElementById('vatAmount').innerText = vat;
     document.getElementById('totalAmount').innerText = total;
 }
-
+// function for confirmation page
 function confirmation() {
     // grabbing all the necessary element
     const from = document.getElementById('flying-from').value;
