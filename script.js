@@ -1,29 +1,3 @@
-// document.getElementById('f-ticket-increase').addEventListener('click', function() {
-//     const ticketInput = document.getElementById('f-ticket-count');
-//     const ticketCount = parseInt(ticketInput.value);
-//     const ticketNewCount = ticketCount + 1;
-//     ticketInput.value = ticketNewCount;
-// });
-
-// document.getElementById('f-ticket-decrease').addEventListener('click', function() {
-//     const ticketInput = document.getElementById('f-ticket-count');
-//     const ticketCount = parseInt(ticketInput.value);
-//     const ticketNewCount = ticketCount - 1;
-//     ticketInput.value = ticketNewCount;
-// })
-// function handleTicketChange(isIncrease) {
-//     const ticketInput = document.getElementById('f-ticket-count');
-//     const ticketCount = parseInt(ticketInput.value);
-//     let ticketNewCount = 0;
-//     if (isIncrease == true) {
-//         ticketNewCount = ticketCount + 1;
-//     }
-//     if (isIncrease == false && ticketCount > 0) {
-//         ticketNewCount = ticketCount - 1;
-//     }
-//     ticketInput.value = ticketNewCount;
-// }
-
 function handleTicketChange(isIncrease, ticketType) {
     const ticketCount = getInputValue(ticketType);
     let ticketNewCount = 0;
@@ -54,7 +28,6 @@ function getTotal() {
     document.getElementById('vatAmount').innerText = vat;
     document.getElementById('totalAmount').innerText = total;
 }
-
 
 function confirmation() {
     // grabbing all the necessary element
@@ -89,8 +62,5 @@ function confirmation() {
             document.getElementById('containerMain').style.display = 'none';
             document.getElementById('confirmation').style.display = 'block';
         }
-
     }
-
-
 }
